@@ -13,7 +13,7 @@ module.exports.send = function (toMail) {
         connectionTimeout: '700000',
         auth: {
             user: 'priya.shanmugam@aspiresys.com',
-            pass: '$Gayathri94'
+            pass: 'xxxx'
         }
     });
     var message = '';

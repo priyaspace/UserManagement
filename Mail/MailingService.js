@@ -44,13 +44,11 @@ module.exports.send = function (toMail) {
                                     console.log('error in finding admins', err);
                                 }
                                 else if (admins[0]) {
-                                    console.log('inside admin');
                                     admins.forEach(function (admin) {
                                         adminsEmail[i] = admin.email;
                                         i++;
                                     });
-                                    adminsEmail[adminsEmail.length] = toMail;
-                                    console.log('adminsEmail3:', adminsEmail);
+                                    adminsEmail[adminsEmail.length] = toMail;  
                                     mailOptions.to = adminsEmail;
                                     mailOptions.text = message;
                                     transport.sendMail(mailOptions, function (err, info) {
